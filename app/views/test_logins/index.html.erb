@@ -1,0 +1,25 @@
+<h1>Listing test_logins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_logins.each do |test_login| %>
+      <tr>
+        <td><%= link_to 'Show', test_login %></td>
+        <td><%= link_to 'Edit', edit_test_login_path(test_login) %></td>
+        <td><%= link_to 'Destroy', test_login, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test login', new_test_login_path %>
